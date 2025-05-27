@@ -1,0 +1,37 @@
+.tech-stack-section {
+    align-self: center;
+    gap: 8px;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tech-stack-category {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #00ff00;
+}
+
+.tech-stack-list-of-items {
+    display: flex;
+    gap: 4px;
+}
+
+.card {
+    align-items: center;
+    background-color: lightblue !important;
+}
+
+.card-title {
+    font-family: 'JetBrains Mono', monospace;
+}

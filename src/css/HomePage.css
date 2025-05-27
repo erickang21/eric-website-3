@@ -1,0 +1,18 @@
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: grid;
+}
