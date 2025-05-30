@@ -24,7 +24,7 @@ const commands = {
   shutdown: ['Nice try :)'],
   logout: ['Nice try :)'],
   sudo: ['You do not have sudo permissions. This incident has been reported. (jk)'],
-  songrec: ['Coming soon...']
+  songrec: ['Coming soon...'],
 };
 //todo: linkedin, spotify, song rec,
 // ls, pwd, su, cd
@@ -43,7 +43,7 @@ export default function Terminal() {
     "uwu-bot": ["README.md"],
     "transit-guesser": ["README.md"],
     "bananapi": ["README.md"],
-  }));
+  }), []);
   const readMeMap = useMemo(() => ({
     "uwu-bot": [
       "The most popular anime-themed Discord bot! Send cute GIFs to friends, generate memes, and customize your own profile.",
