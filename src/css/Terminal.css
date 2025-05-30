@@ -23,7 +23,7 @@ span {
     margin: 2rem auto;
     box-shadow: 0 0 10px #00ff0055;
     min-height: 400px;
-    max-height: 90vh;
+    max-height: 75vh;
     overflow-y: auto;
 }
 
@@ -98,5 +98,13 @@ form {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.1rem;
     z-index: 10;
-    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .section-subtext {
+        font-size: 16px;
+    }
+    .terminal-window {
+        max-height: 60vh;
+    }
 }

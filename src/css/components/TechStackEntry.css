@@ -13,3 +13,9 @@
     align-self: center;
     font-size: 16px;
 }
+
+@media (max-width: 768px) {
+    .tech-stack-entry-text {
+        font-size: 8px;
+    }
+}

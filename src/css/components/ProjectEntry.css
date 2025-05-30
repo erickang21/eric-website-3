@@ -20,3 +20,19 @@
 .project-link {
     font-size: 24px;
 }
+
+.project-icon {
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .project-title-text {
+        font-size: 24px;
+    }
+    .card-text {
+        font-size: 14px;
+    }
+    .project-link {
+        font-size: 12px;
+    }
+}

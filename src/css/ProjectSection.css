@@ -22,3 +22,9 @@
 .scroll-formore-projects {
     margin-top: 2vh;
 }
+
+@media (max-width: 768px) {
+    .project-list {
+        margin-top: 0;
+    }
+}

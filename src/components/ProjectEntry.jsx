@@ -6,7 +6,7 @@ const ProjectEntry = ({ name, iconURL, description, links }) => {
     <Card className="project-card">
       <Card.Header>
         <div className="project-title">
-          <img src={iconURL} alt={name} height={48} width={48}/>
+          <img className="project-icon" src={iconURL} alt={name} height={24} width={24}/>
           <span className="project-title-text">{name}</span>
         </div>
       </Card.Header>
@@ -16,7 +16,7 @@ const ProjectEntry = ({ name, iconURL, description, links }) => {
         </Card.Text>
         <div>
           {links.map((link) => {
-            return <Card.Link className="project-link" href={link.link}>&gt; {link.text}</Card.Link>
+            return <Card.Link className="project-link" href={link.link} target="_blank">&gt; {link.text}</Card.Link>
           })}
         </div>
       </Card.Body>
