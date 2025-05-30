@@ -24,6 +24,7 @@ const commands = {
   shutdown: ['Nice try :)'],
   logout: ['Nice try :)'],
   sudo: ['You do not have sudo permissions. This incident has been reported. (jk)'],
+  songrec: ['Coming soon...']
 };
 //todo: linkedin, spotify, song rec,
 // ls, pwd, su, cd
