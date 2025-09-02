@@ -137,6 +137,9 @@
 }
 
 @media (max-width: 768px) {
+    .name-section {
+        margin-top: 10vh;
+    }
     .name-text-section {
         gap: 1rem;
     }

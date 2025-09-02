@@ -49,8 +49,8 @@ const ProjectSection = () => {
       image: "https://i.ibb.co/XrPy2YsD/a50fffb7af16446c94df8afd6b3db64c.png",
     },
     {
-      name: "Ravener",
-      nickname: "(A.K.A. \"?\")",
+      name: "Raven",
+      nickname: "(A.K.A. \"Ravener\")",
       role: "Developer, Community Moderator",
       image: "https://i.ibb.co/JWCQb13h/31079629.jpg",
     }

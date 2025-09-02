@@ -28,20 +28,22 @@
 .section {
     height: calc(100vh - 4rem);
     scroll-snap-align: start;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
 .scrollformore {
     font-size: 1rem;
     color: gray;
-    position: absolute;
-    bottom: 0;
+    position: static;
+    bottom: 50px;
     left: 0;
     width: 100%;
     height: 50px;
     background: #FFF6F1;
     pointer-events: none;
+    margin-top: auto;
   }
 
 .last-section {
@@ -50,14 +52,3 @@
     display: grid;
     position: relative;
 }
-
-.bottom-cover {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: calc(100% - 8px);
-    height: 50px;               /* same height as your scroll hint/gradient */
-    background-color: #FFF6F1;  /* match section background */
-    pointer-events: none;       /* allow scrolling through */
-    z-index: 10;                 /* above gradient/arrow */
-  }
