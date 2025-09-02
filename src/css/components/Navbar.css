@@ -1,0 +1,54 @@
+.uwu-navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #FFF6F1;
+    padding: 1rem;
+    align-items: center;
+}
+
+.uwu-navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.uwu-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.uwu-navbar-title {
+    font-family: 'Cherry Bomb One', sans-serif;
+    text-decoration: none !important;
+    color: #714b4a;
+}
+
+.uwu-navbar-title:hover {
+    cursor: pointer;
+}
+
+.uwu-navbar-link {
+    font-family: Nunito, sans-serif;
+    font-size: 1rem;
+    text-decoration: none !important;
+    color: #714b4a;
+    font-weight: 750;
+}
+
+.navbar-button {
+    font-family: Nunito, sans-serif;
+    background-color: #714b4a;
+    border: 1px solid #714b4a;
+    border-radius: 1.5rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    cursor: pointer;
+}

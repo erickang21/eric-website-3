@@ -1,18 +1,141 @@
-.projects-section {
-    padding: 1rem;
-    color: #00ff00;
-    font-family: 'JetBrains Mono', monospace;
-}
-
-.projects {
-    align-self: center;
-}
-
-.project-list {
-    margin-top: 5vh;
-    gap: 2vh;
+.showcase {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: #FFF6F1;
+}
+
+.uwu-bot-stats-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #FFF6F1;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.transition {
+    background-color: #FEFBF8;
+    height: 10vh;
+    width: 100%;
+}
+
+.uwu-bot-community-title {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: Nunito, sans-serif;
+}
+
+.uwu-bot-stats {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-bottom: 2rem;
+}
+
+.uwu-bot-stats-item-value {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #714b4a;
+    font-family: Cherry Bomb One, sans-serif;
+}
+
+.uwu-bot-stats-item-title {
+    font-weight: 750;
+    color: 714b4a;
+    font-size: 1rem;
+}
+
+.uwu-bot-stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.uwu-bot-devs-title {
+    font-size: 2.25rem;
+    font-weight: bolder;
+    font-family: Nunito, sans-serif;
+}
+
+.uwu-bot-testimonies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #FEFBF8;
+    padding: 1rem 0;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
+
+.uwu-bot-testimonies-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.uwu-bot-testimonies-item-text {
+    color: rgb(148, 147, 147);
+    font-style: italic;
+}
+
+.uwu-bot-testimonies-item-author {
+    color: rgb(148, 147, 147);
+    font-style: italic;
+    font-size: 1rem;
+}
+
+
+.uwu-bot-devs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #FFF6F1;
+    padding: 1rem 0;
+    gap: 1rem;
+    height: 100%;
+}
+
+.uwu-bot-devs-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.uwu-bot-devs-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    width: 33vw;
+    padding: 1rem;
+}
+
+.uwu-bot-devs-item-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.uwu-bot-devs-item-nickname {
+    font-size: 16px;
+    color: #714b4a;
+}
+
+.uwu-bot-devs-item-role {
+    font-size: 1rem;
+    color: #714b4a;
+}
+
+.uwu-bot-devs-item-image {
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
 }
 
 .section-title {
@@ -20,11 +143,57 @@
 }
 
 .scroll-formore-projects {
-    margin-top: 2vh;
+    padding-bottom: 1rem;
+    margin-top: auto;
 }
 
 @media (max-width: 768px) {
+    /* reduce title sizes */
+    .uwu-bot-community-title {
+        font-size: 2rem;
+    }
+    
+    .uwu-bot-devs-title {
+        font-size: 2rem;
+    }
+
+    /* shrink quotes section */
+    .uwu-bot-testimonies-item-text {
+        font-size: 0.7rem;
+    }
+
+    .uwu-bot-testimonies-item-author {
+        font-size: 0.7rem;
+    }
+
+    .uwu-bot-testimonies-item {
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+
+    .uwu-bot-testimonies {
+        padding: 0;
+    }
+
     .project-list {
         margin-top: 0;
+    }
+    
+    .uwu-bot-devs-item-name {
+        font-size: 20px;
+    }
+
+    .uwu-bot-devs-item-nickname {
+        font-size: 12px;
+    }
+
+    .uwu-bot-devs-item-role {
+        font-size: 12px;
+        text-align: center;
+    }    
+
+    .uwu-bot-stats-section {
+        margin-top: 0;
+        padding: 0;
     }
 }

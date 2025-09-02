@@ -1,0 +1,39 @@
+.feature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF6F1;
+    margin-top: 5%;
+}
+
+.feature-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.feature-description {
+    font-size: 1.5rem;
+    font-weight: regular;
+}
+
+.feature-image {
+    height: 50vh;
+    width: 55vw;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .feature-title {
+        font-size: 1.5rem;
+        margin-top: 5vh;
+    }
+
+    .feature-description {
+        font-size: 1rem;
+    }
+
+    .feature-image {
+        height: 30vh !important;
+        width: 90vw !important;
+    }
+}

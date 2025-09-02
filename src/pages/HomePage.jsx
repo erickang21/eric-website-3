@@ -11,22 +11,18 @@ import TitleSection from "./TitleSection";
 import ProjectSection from "./ProjectSection";
 import Terminal from "./Terminal";
 import TechStackSection from "./TechStackSection";
+import FeaturePages from './FeaturePages';
 
 const HomePage = () => {
   return (
     <div className="scroll-container">
-      <section className="section">
+      <section className="section light-brown-background">
         <TitleSection />
       </section>
       <section className="section projects-section">
         <ProjectSection />
       </section>
-      <section className="section tech-stack-section">
-        <TechStackSection />
-      </section>
-      <section className="section terminal-section">
-        <Terminal />
-      </section>
+      <FeaturePages />
     </div>
   );
 }

@@ -1,66 +1,104 @@
 import {motion} from 'framer-motion';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/ProjectSection.css';
 import Card from 'react-bootstrap/Card';
 import ProjectEntry from "../components/ProjectEntry";
 
 const ProjectSection = () => {
-  const projectList = [
+  const [users, setUsers] = useState(0);
+  const [servers, setServers] = useState(0);
+  
+  useEffect(() => {
+    fetch("/api/stats")
+      .then(res => res.json())
+      .then((data) => {
+        setUsers(data.users);
+        setServers(data.servers);
+      })
+  })
+  // These are just defaulting to estimates, if for some reason the API fails...
+  const statsList = [
     {
-      name: "uwu bot",
-      iconURL: "https://cdn.discordapp.com/avatars/520682706896683009/71d90cffedce0b73a688078bab6b5cef.png?size=4096",
-      description: "Founder and developer of the most popular anime-themed Discord bot, with over 1.5M active users from over 26,000 communities.",
-      links: [
-        { text: "App", link: "https://dsc.gg/uwubot"},
-        { text: "App Directory Page", link: "https://top.gg/bot/520682706896683009"},
-        { text: "GitHub", link: "https://github.com/erickang21/uwu-bot-v4"}
-      ]
+      title: "active users",
+      value: users ? users.toLocaleString() : "1,400,000",
     },
     {
-      name: "Transit Guesser",
-      iconURL: "https://i.ibb.co/jkBRGSXs/transportation-icons-set-flat-style-city-transport-vehicle-icons-bus-tram-truck-van-339976-56609.png",
-      description: "Developer of a map-based transit game inspired by GeoGuessr, designed to promote sustainable modes of transportation.",
-      links: [
-        { text: "App", link: "https://transitguesser.me"},
-        { text: "GitHub", link: "https://github.com/erickang21/transit-guesser"}
-      ]
+      title: "servers",
+      value: servers ? servers.toLocaleString() : "26,000",
+    },
+  ];
+  const testimoniesList = [
+    {
+      text: "uwu bot is the best bot. Senor Banana the creator keeps the bot upkept and is always adding cool new features!",
+      author: "Райан>.<",
     },
     {
-      name: "uwu café",
-      iconURL: "https://i.ibb.co/gL1nj2Nm/178ed6f1c77c2483f961ad5440c06279.webp",
-      description: "Led a mentorship community with over 1,200 members for aspiring Computer Science students.",
-      links: [
-        { text: "Community", link: "https://discord.gg/vCMEmNJ"},
-      ]
+      text: "very good bot; I even added it as the first bot in my server and it's great!",
+      author: "QuandooglePhilliasThe3rd",
+    },
+    {
+      text: "This bot is amazing and I would def recommend!!",
+      author: "jollyfunnybone"
     }
   ]
+  const devsList = [
+    {
+      name: "Eric Kang",
+      nickname: "(A.K.A. \"banana\")",
+      role: "Founder, Lead Developer, Community Manager",
+      image: "https://i.ibb.co/XrPy2YsD/a50fffb7af16446c94df8afd6b3db64c.png",
+    },
+    {
+      name: "Ravener",
+      nickname: "(A.K.A. \"?\")",
+      role: "Developer, Community Moderator",
+      image: "https://i.ibb.co/JWCQb13h/31079629.jpg",
+    }
+  ];
   return (
-    <div className="projects">
-      <motion.h2
-        initial={{opacity: 0, y: 20}}
-        whileInView={{opacity: 1, y: 0}}
-        transition={{duration: 1}}
-        className="section-title"
-      >
-        Projects
-      </motion.h2>
-      <div className="project-list">
-        {projectList.map(({name, iconURL, description, links}, index) => {
-          return (
-            <motion.div
-              key={index}
-              className=""
-              initial={{opacity: 0, y: 20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{duration: 0.5, delay: index * 0.15}}
-            >
-              <ProjectEntry name={name} iconURL={iconURL} description={description} links={links}/>
-            </motion.div>
-          )
-        })}
+    <div className="showcase">
+      <div className="uwu-bot-stats-section">
+        <div className="uwu-bot-community-title">
+          <span>uwu bot has...</span>
+        </div>
+        <div className="uwu-bot-stats">
+          {statsList.map((stat) => (
+            <div className="uwu-bot-stats-item">
+              <span className="uwu-bot-stats-item-value">{stat.value}</span>
+              <span className="uwu-bot-stats-item-title">{stat.title}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="uwu-bot-testimonies">
+          <div className="uwu-bot-testimonies-list">
+            {testimoniesList.map((entry) => (
+              <div className="uwu-bot-testimonies-item">
+                <span className="uwu-bot-testimonies-item-text">"{entry.text}"</span>
+                <p className="uwu-bot-testimonies-item-author">{` - ${entry.author}`}</p>
+              </div>
+            ))}
+          </div>
+      </div>
+      <div className="uwu-bot-devs">
+        <div className="uwu-bot-devs-title">
+          <span>meet the uwu bot team!</span>
+        </div>
+        <div className="uwu-bot-devs-list">
+          {devsList.map((dev) => (
+          <div className="uwu-bot-devs-item">
+            <img className="uwu-bot-devs-item-image" src={dev.image} alt={dev.name} />
+            <span className="uwu-bot-devs-item-name">{dev.name}</span>
+            <span className="uwu-bot-devs-item-nickname">{dev.nickname}</span>
+            <span className="uwu-bot-devs-item-role">{dev.role}</span>
+          </div>
+          ))}
+          
+        </div>
+        
       </div>
       <div className="scroll-formore-projects">
-        <span className="scroll-formore-text">↓ Scroll for tech stack! ↓</span>
+        <span className="scroll-formore-text">↓ Scroll for some demos! ↓</span>
       </div>
     </div>
   );

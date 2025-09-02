@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import Typewriter from "typewriter-effect";
 import SocialEntry from "../components/SocialEntry";
 import {FaGithub} from "react-icons/fa";
@@ -10,29 +11,23 @@ const TitleSection = () => {
   return (
     <div className="title">
       <div className="name-section">
-        <div className="name-wrapper">
-          <h1 className="terminal-glitch">
-            <span className="prompt">&gt;</span> <span className="" data-text="Eric Kang">Eric Kang</span>
-          </h1>
+        <div className="name-text-section">
+          <img src="https://i.ibb.co/twcG5zYR/71d90cffedce0b73a688078bab6b5cef.png" className="pfp" alt="uwu bot profile"></img>
+          <h1 className="name-text">uwu bot</h1>
         </div>
-        <Typewriter
-          options={{
-            strings: ['Dev for 1M+ users.', 'CS + AI @ UWaterloo \'27', 'Passionate full-stack developer.', '1.5+ years of professional work experience.'],
-            autoStart: true,
-            loop: true,
-            pauseFor: 3000,
-          }}
-        />
+        <p className="description-text">Anime ● Memes ● Fun</p>
+        <p className="stats-text">An anime-themed Discord bot, trusted by 1.5M users.</p>
       </div>
-      <div className="socials">
-        <SocialEntry icon={<FaGithub/>} username="erickang21" link="https://github.com/erickang21"/>
-        <SocialEntry icon={<CiLinkedin/>} username="Eric Kang"
-                     link="https://www.linkedin.com/in/eric-kang-7052bb121/"/>
-        <SocialEntry icon={<AiOutlineSpotify/>} username="bananaboy2121"
-                     link="https://open.spotify.com/user/bananaboy2121?si=03367b2a402d4e18"/>
-      </div>
+      <button 
+        className="invite-button" 
+        href="https://discord.com/oauth2/authorize?client_id=520682706896683009&permissions=1073753094&scope=bot"
+        onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=520682706896683009&permissions=1073753094&scope=bot", "_blank")}
+      >
+        𐔌՞. .՞𐦯 Invite me!
+      </button>
+      <p className="server-text">or <a className="server-link" href="https://discord.gg/RZ8SZxPrQQ" target="_blank">join the Discord server</a> to try it out first!</p>
       <div className="scroll-formore">
-        <span className="scroll-formore-text">↓ Scroll to see projects (surprise at bottom!) ↓</span>
+        <span className="scroll-formore-text">↓ Scroll to see more! ↓</span>
       </div>
     </div>
   );
