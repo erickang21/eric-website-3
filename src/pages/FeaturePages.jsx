@@ -27,7 +27,7 @@ const FeaturePages = () => {
     return (
         <>
         {featuresList.map((feature, index) => (
-            <section className="section" style={{ backgroundColor: "#FFF6F1" }}>
+            <section className={index === featuresList.length - 1 ?  "last-section" : "section"} style={{ backgroundColor: "#FFF6F1" }}>
                 <FeatureSection title={feature.title} description={feature.description} imageURL={feature.imageURL} gif={feature.gif} style={feature.style} last={index === featuresList.length - 1}/>
             </section>
         ))}

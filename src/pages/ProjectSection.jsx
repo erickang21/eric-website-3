@@ -97,9 +97,6 @@ const ProjectSection = () => {
         </div>
         
       </div>
-      <div className="scroll-formore-projects">
-        <span className="scroll-formore-text">↓ Scroll for some demos! ↓</span>
-      </div>
     </div>
   );
 }

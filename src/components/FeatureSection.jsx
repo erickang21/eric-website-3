@@ -10,13 +10,6 @@ const FeatureSection = ({ title, description, imageURL, gif, style, last }) => {
                 <iframe className="feature-image" id="js_video_iframe" src={imageURL} style={style}></iframe> :
                 <img className="feature-image" src={imageURL} style={style}></img> 
             }
-            {
-            !last && (
-                <div className="scroll-formore">
-                    <span className="scroll-formore-text">↓ Scroll for more features! ↓</span>
-                </div>
-            )
-            }
         </div>
     )
 };

@@ -26,9 +26,7 @@ const TitleSection = () => {
         𐔌՞. .՞𐦯 Invite me!
       </button>
       <p className="server-text">or <a className="server-link" href="https://discord.gg/RZ8SZxPrQQ" target="_blank">join the Discord server</a> to try it out first!</p>
-      <div className="scroll-formore">
-        <span className="scroll-formore-text">↓ Scroll to see more! ↓</span>
-      </div>
+      <div class="scroll-down-arrow"></div>
     </div>
   );
 }

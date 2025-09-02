@@ -17,6 +17,7 @@
     font-size: 1.5rem;
 }
 
+
 @media (max-width: 768px) {
     .donate-description {
         font-size: 1rem;

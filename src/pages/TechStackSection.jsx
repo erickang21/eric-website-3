@@ -101,9 +101,6 @@ const TechStackSection = () => {
           </motion.div>
         )
       })}
-      <div className="scroll-formore-projects">
-        <span className="scroll-formore-text">↓ Scroll for a fun surprise! ↓</span>
-      </div>
     </div>
   );
 }
