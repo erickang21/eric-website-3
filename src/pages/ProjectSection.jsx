@@ -74,8 +74,8 @@ const ProjectSection = () => {
           <div className="uwu-bot-testimonies-list">
             {testimoniesList.map((entry) => (
               <div className="uwu-bot-testimonies-item">
-                <span className="uwu-bot-testimonies-item-text">"{entry.text}"</span>
-                <p className="uwu-bot-testimonies-item-author">{` - ${entry.author}`}</p>
+                <span className="uwu-bot-testimonies-item-text">"{entry.text}{` - ${entry.author}`}"</span>
+
               </div>
             ))}
           </div>

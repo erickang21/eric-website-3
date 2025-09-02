@@ -67,9 +67,15 @@
     align-items: center;
     width: 100%;
     background-color: #FEFBF8;
-    padding: 1rem 0;
+    padding: 1rem;
     gap: 1rem;
     font-size: 1.25rem;
+}
+
+.uwu-bot-testimonies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .uwu-bot-testimonies-item {

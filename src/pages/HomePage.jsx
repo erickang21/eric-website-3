@@ -18,9 +18,11 @@ const HomePage = () => {
     <div className="scroll-container">
       <section className="section light-brown-background">
         <TitleSection />
+        <div className="scrollformore">↓ Scroll for more! ↓</div>
       </section>
       <section className="section projects-section">
         <ProjectSection />
+        <div className="scrollformore">↓ Scroll for more! ↓</div>
       </section>
       <FeaturePages />
     </div>

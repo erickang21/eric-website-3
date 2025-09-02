@@ -29,10 +29,10 @@
     height: calc(100vh - 4rem);
     scroll-snap-align: start;
     display: grid;
+    position: relative;
 }
 
-.section::after {
-    content: '↓ Scroll for more! ↓';
+.scrollformore {
     font-size: 1rem;
     color: gray;
     position: absolute;
@@ -40,7 +40,7 @@
     left: 0;
     width: 100%;
     height: 50px;
-    background: linear-gradient(to bottom, #FFF6F1, rgba(255,255,255,1));
+    background: #FFF6F1;
     pointer-events: none;
   }
 
