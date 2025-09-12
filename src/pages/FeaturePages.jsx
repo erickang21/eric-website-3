@@ -29,7 +29,7 @@ const FeaturePages = () => {
         {featuresList.map((feature, index) => (
             <section className={index === featuresList.length - 1 ?  "last-section" : "section"} style={{ backgroundColor: "#FFF6F1" }}>
                 <FeatureSection title={feature.title} description={feature.description} imageURL={feature.imageURL} gif={feature.gif} style={feature.style} last={index === featuresList.length - 1}/>
-                {index !== featuresList.length - 1 && <div className="scrollformore">↓ Scroll for more! ↓</div>}
+                {index !== featuresList.length - 1 ? <div className="scrollformore">↓ Scroll for more! ↓</div> : <div className="scrollformore-static">Design inspired by <a class="server-link" href="https://www.bobatalks.com/" target="_blank">BobaTalks</a></div>}
             </section>
         ))}
         </>
